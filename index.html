@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highlights Cut &amp; Color Salon | Moscow, Idaho</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1b1320;--card:#251a2c;--cream:#f6f0f7;--muted:#c4b3cf;--g1:#ff5e8a;--g2:#ff9d5c;--g3:#ffd166;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito Sans',sans-serif;color:var(--cream);background:var(--bg);line-height:1.7;font-size:18.5px;}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.demo-tag{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;text-align:center;font-size:.75rem;padding:.45rem;letter-spacing:2px;text-transform:uppercase;}
+header{position:sticky;top:0;z-index:20;background:rgba(27,19,32,.92);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.15rem;border-bottom:1px solid #332440;}
+header .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;}
+.logo-sm{height:48px;mix-blend-mode:screen;display:block;}
+.logo-hero{width:230px;max-width:62%;mix-blend-mode:screen;margin:0 auto .5rem;display:block;}
+.slogan{font-family:'Pinyon Script',cursive;font-size:2.5rem;color:var(--g3);margin-top:.5rem;line-height:1.2;}
+.logo-hs{display:inline-block;position:relative;line-height:1;}
+.logo-hs .lh{font-family:'Fraunces',serif;font-weight:500;background:linear-gradient(160deg,#f2f2f2,#9b9b9b);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.logo-hs .ls{font-family:'Pinyon Script',cursive;background:linear-gradient(160deg,#e8c268,#b8903a);-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:-.28em;position:relative;top:.08em;}
+.brand-wrap{display:flex;align-items:center;gap:.6rem;}
+.brand-wrap .logo-hs .lh{font-size:1.5rem;}
+.brand-wrap .logo-hs .ls{font-size:1.7rem;}
+.hero-logo{margin-bottom:.6rem;}
+.hero-logo .lh{font-size:3.4rem;}
+.hero-logo .ls{font-size:3.9rem;}
+header .hdr-btns{display:flex;gap:.5rem;}
+header a.call{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;text-decoration:none;font-weight:700;padding:.65rem 1.35rem;border-radius:999px;font-size:1rem;}
+header a.book{border:1.5px solid #4d3a5e;color:var(--cream);text-decoration:none;font-weight:700;padding:.65rem 1.35rem;border-radius:999px;font-size:1rem;}
+.phonebar{display:block;max-width:660px;margin:1.2rem auto 0;padding:1.5rem;border:none;border-radius:999px;font-weight:700;font-size:1.95rem;color:#fff;text-align:center;text-decoration:none;letter-spacing:1px;background:linear-gradient(90deg,#9a5fd0,#5f2f8e);box-shadow:0 4px 22px rgba(138,85,184,.45);transition:filter .2s ease,transform .15s ease;}
+.phonebar:hover{filter:brightness(1.25);transform:scale(1.015);}
+.morephotos{display:block;text-align:center;margin:.2rem auto 0;color:var(--muted);text-decoration:none;font-weight:700;font-size:.98rem;}
+.morephotos:hover{color:var(--g2);}
+.hero{padding:4.5rem 1.25rem 3.5rem;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(27,19,32,.87),rgba(27,19,32,.94)),url('https://s3-media0.fl.yelpcdn.com/bphoto/0_jXsnQRtZ6zb3RPc1dXJw/o.jpg') center/cover;}
+.hero::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,94,138,.30),transparent 65%);top:-120px;right:-100px;}
+.hero::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,209,102,.20),transparent 65%);bottom:-100px;left:-90px;}
+.hero>*{position:relative;z-index:1;}
+.hero .eyebrow{letter-spacing:3px;font-size:.8rem;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+.hero h1{font-size:clamp(2.5rem,9.5vw,3.5rem);line-height:1.08;}
+.hero p{margin:1.25rem auto 2rem;color:var(--muted);font-size:1.12rem;max-width:36ch;}
+.btnrow{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;}
+.btn{text-decoration:none;padding:1rem 1.9rem;border-radius:999px;font-weight:700;font-size:1.05rem;}
+.btn.grd{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;box-shadow:0 4px 18px rgba(255,94,138,.35);}
+.btn.line{border:1.5px solid #4d3a5e;color:var(--cream);}
+.btn.big{font-size:1.55rem;padding:1.45rem 3.2rem;}
+/* photo rail */
+.rail-wrap{position:relative;padding:1.5rem 0 2.5rem;}
+.rail-wrap h2{text-align:center;font-size:1.9rem;margin-bottom:.35rem;}
+.rail-wrap .sub{text-align:center;color:var(--muted);font-size:.98rem;margin-bottom:1.4rem;}
+.rail{display:flex;gap:.9rem;overflow-x:auto;padding:1rem 1.25rem 1.4rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+.rail::-webkit-scrollbar{height:6px;}
+.rail::-webkit-scrollbar-thumb{background:#4d3a5e;border-radius:3px;}
+.shot{flex:0 0 auto;width:230px;height:300px;border-radius:16px;scroll-snap-align:center;background:var(--card);border:1px solid #3a2a48;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem;text-align:center;padding:1rem;transition:transform .25s ease, box-shadow .25s ease;background-size:cover;background-position:center;}
+.shot:hover{transform:scale(1.07);box-shadow:0 8px 30px rgba(255,94,138,.25);z-index:2;}
+.shot.p1{background-image:linear-gradient(160deg,#3a2040,#57284a);}
+.shot.p2{background-image:linear-gradient(160deg,#442447,#6b3a3a);}
+.shot.p3{background-image:linear-gradient(160deg,#2f1f3e,#4d3157);}
+.shot.p4{background-image:linear-gradient(160deg,#41224a,#5e2f52);}
+.shot.p5{background-image:linear-gradient(160deg,#35203f,#613c46);}
+.rating{background:var(--card);border-top:1px solid #332440;border-bottom:1px solid #332440;text-align:center;padding:1.1rem;font-size:1.02rem;}
+.rating b{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--g3);}
+.rating span{color:#e8b93c;letter-spacing:2px;}
+.rating small{color:var(--muted);font-size:.92rem;}
+section{padding:3.25rem 1.25rem;max-width:660px;margin:0 auto;}
+section h2{font-size:1.9rem;margin-bottom:1.3rem;}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+.svc div{background:var(--card);border:1px solid #332440;border-radius:14px;padding:1.1rem;}
+.svc strong{display:block;font-size:1.02rem;margin-bottom:.15rem;}
+.svc span{font-size:.9rem;color:var(--muted);}
+.svc-color strong{font-size:1.22rem;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.svc-color span{font-size:1.02rem;color:#ffb27a;}
+.oneliner{background:var(--card);border:1px solid #332440;border-radius:16px;padding:1.5rem;text-align:center;}
+.oneliner p{color:var(--muted);font-size:1rem;}
+.oneliner b{color:var(--cream);}
+.social{display:grid;gap:.8rem;}
+.social a{display:block;text-decoration:none;background:var(--card);border:1px solid #332440;border-radius:14px;padding:1.15rem 1.3rem;color:var(--cream);font-weight:700;font-size:1.02rem;}
+.social a span{display:block;font-weight:400;font-size:.9rem;color:var(--muted);margin-top:.1rem;}
+.social a:hover{border-color:var(--g1);}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid #332440;font-size:1rem;}
+.hours li:last-child{border-bottom:none;}
+.hours li span{color:var(--muted);}
+.review-card{background:var(--card);border:1px solid #332440;border-radius:14px;padding:1.15rem 1.25rem;margin-bottom:.8rem;}
+.review-card p.txt{font-size:1.08rem;}
+.review-card p.who{font-size:.92rem;margin-top:.45rem;}
+.duo{display:grid;gap:1.5rem;}
+@media(min-width:640px){.duo{grid-template-columns:1fr 1fr;gap:1rem;}}
+.col h3{font-family:'Fraunces',serif;font-size:1.45rem;margin-bottom:.3rem;}
+.col .score{margin-bottom:.9rem;font-size:1.08rem;color:var(--muted);}
+.col .score b{color:var(--g3);font-size:1.3rem;}
+.pop{transition:transform .22s ease, box-shadow .22s ease;}
+.pop:hover{transform:scale(1.05);box-shadow:0 8px 26px rgba(255,94,138,.22);}
+.visit{background:linear-gradient(160deg,#241631,#1b1320);max-width:none;border-top:1px solid #332440;}
+.visit .inner{max-width:660px;margin:0 auto;}
+.visit p{color:var(--muted);margin-bottom:1.3rem;font-size:1.02rem;}
+.visit .addr{color:var(--cream);font-weight:700;font-size:1.1rem;}
+footer{text-align:center;padding:1.6rem 1rem;font-size:.8rem;color:#7d6b8a;}
+</style>
+</head>
+<body>
+<div class="demo-tag">Website concept preview</div>
+<header>
+<div class="brand-wrap"><div class="brand">Highlights <span class="grad">Cut &amp; Color</span></div></div>
+<div class="hdr-btns">
+<a class="book" href="https://booksy.com/en-us/1129811_highlights-salon_hair-salon_17979_moscow">Book</a>
+<a class="call" href="tel:12083017439">Call</a>
+</div>
+</header>
+<div class="hero">
+<img class="logo-hero" src="https://cullenswhite.github.io/moscow-demos/ChatGPT%20Image%20Jul%2017,%202026,%2007_18_13%20PM.png" alt="Highlights Salon — Cut &amp; Color">
+<div class="eyebrow">Eastside Marketplace · Moscow, Idaho</div>
+<h1>Color is the whole <span class="grad">point.</span></h1>
+<p>Balayage, babylights, and certified color correction by Sheri — 25 years behind the chair.</p>
+<p class="slogan">Experience equals perfection.</p>
+<div class="btnrow">
+<a class="btn grd big" href="https://booksy.com/en-us/1129811_highlights-salon_hair-salon_17979_moscow">Book with Booksy</a>
+</div>
+<a class="phonebar" href="tel:12083017439">(208) 301-7439</a>
+</div>
+<div class="rail-wrap">
+<h2>The <span class="grad">work</span></h2>
+<p class="sub">Swipe through Sheri's recent color work.</p>
+<div class="rail">
+<div class="shot" style="background-image:url('https://s3-media0.fl.yelpcdn.com/bphoto/KRRhUe7RmhvHTE1xCXBAEg/o.jpg')"></div>
+<div class="shot" style="background-image:url('https://s3-media0.fl.yelpcdn.com/bphoto/ihgXjKPlw3bu0dZiZzsM0g/o.jpg')"></div>
+<div class="shot" style="background-image:url('https://s3-media0.fl.yelpcdn.com/bphoto/0_jXsnQRtZ6zb3RPc1dXJw/o.jpg')"></div>
+<div class="shot" style="background-image:url('https://s3-media0.fl.yelpcdn.com/bphoto/Xk-efygSIw7CereNhAasBw/o.jpg')"></div>
+<div class="shot" style="background-image:url('https://d2zdpiztbgorvt.cloudfront.net/region1/us/1129811/inspiration/e23fb4d768314be0aba44fdb7e1f18-highlights-salon-inspiration-94f81f1a6ea94531870439dba25fd8-booksy.jpeg?size=640x0')"></div>
+<div class="shot" style="background-image:url('https://d2zdpiztbgorvt.cloudfront.net/region1/us/1129811/inspiration/78610bd3ac3e46959acab806455fd1-highlights-salon-inspiration-e514f8deb7c14ff4bbd9cd264aa838-booksy.jpeg?size=640x0')"></div>
+<div class="shot" style="background-image:url('https://d2zdpiztbgorvt.cloudfront.net/region1/us/1129811/inspiration/e5ea1d1e86c645b5b31c0d3c86b3e1-highlights-salon-inspiration-513469e5bf82471cb4ca64583d831b-booksy.jpeg?size=640x0')"></div>
+<div class="shot" style="background-image:url('https://d2zdpiztbgorvt.cloudfront.net/region1/us/1129811/inspiration/59e5b80e495d4e5f9d198ac2c67402-highlights-salon-inspiration-1d2ce0eadb7e439c84dcdb68dbc8ef-booksy.jpeg?size=640x0')"></div>
+<div class="shot" style="background-image:url('https://d2zdpiztbgorvt.cloudfront.net/region1/us/1129811/inspiration/7a119546089f4ca8adbb3d76465118-highlights-salon-inspiration-549d140aefc14476a30959c2fc12a2-booksy.jpeg?size=640x0')"></div>
+</div>
+<a class="morephotos" href="https://www.yelp.com/biz_photos/highlights-cut-and-color-salon-moscow-3">View more photos →</a>
+</div>
+<div class="rating"><b>4.5</b> <span>★★★★½</span> <small>51 Google reviews</small></div>
+<section>
+<h2><span class="grad">Specialty Services</span></h2>
+<div class="svc svc-color">
+<div><strong>Balayage</strong><span>Hand-painted dimension</span></div>
+<div><strong>Babylights</strong><span>Soft, sun-kissed brightness</span></div>
+<div><strong>Color correction</strong><span>Certified — fixing what went wrong</span></div>
+<div><strong>Foils &amp; weaves</strong><span>Classic highlight technique</span></div>
+<div><strong>Color mapping</strong><span>Placement designed for your cut</span></div>
+<div><strong>Gray coverage</strong><span>Seamless and natural</span></div>
+<div><strong>Bold &amp; vivid color</strong><span>Direct dyes, statement shades</span></div>
+<div><strong>Olaplex treatments</strong><span>Repair, shine &amp; pH balancing</span></div>
+</div>
+</section>
+<section style="padding-top:0">
+<div class="oneliner"><p><b>Certified, not guessing.</b> Certified color correction specialist · Organic color system certified · 25 years of experience — working with gentler, ammonia-free formulas that are kinder to your hair and scalp.</p></div>
+</section>
+<section style="padding-top:0" id="reviews">
+<h2>What clients <span class="grad">say</span></h2>
+<div class="duo">
+<div class="col">
+<h3>On Google</h3>
+<p class="score"><b>4.5</b> <span style="color:#e8b93c">★★★★½</span> · 51 reviews</p>
+<div class="review-card pop"><p class="txt">Lillyana has been seeing Sheri since moving to the area — welcoming, skilled with her shears, and recommended without hesitation.</p><p class="who grad">— from Lillyana's Google review</p></div>
+<div class="review-card pop"><p class="txt">Riley says Sheri nailed the exact blonde shade she wanted — and salon dog Blue kept her company through the appointment.</p><p class="who grad">— from Riley's Google review</p></div>
+<div class="review-card pop"><p class="txt">Jennifer came in with a badly botched bang trim from a chain salon — Sheri turned it around completely.</p><p class="who grad">— from Jennifer's Google review</p></div>
+<a class="btn line" style="display:block;text-align:center;margin-top:.4rem" href="https://www.google.com/maps/search/?api=1&query=Highlights+Cut+%26+Color+Salon+1420+S+Blaine+St+Moscow+ID">Read my reviews on Google</a>
+</div>
+<div class="col">
+<h3>On Yelp</h3>
+<p class="score"><b>4.1</b> <span style="color:#e8b93c">★★★★</span> · 13 reviews · 95 photos</p>
+<div class="review-card pop"><p class="txt">One client came in with brittle, over-processed hair — Sheri trimmed it, toned it, and put in the work to bring it back to life.</p><p class="who grad">— from a Yelp review</p></div>
+<div class="review-card pop"><p class="txt">Another has known Sheri since childhood and says she's the reason they went to cosmetology school — a role model and a fabulous stylist.</p><p class="who grad">— from a Yelp review</p></div>
+<div class="review-card pop"><p class="txt">Attentive to exactly what you ask for — she knows hair, and her highlights prove it.</p><p class="who grad">— from a Yelp review</p></div>
+<a class="btn line" style="display:block;text-align:center;margin-top:.4rem" href="https://www.yelp.com/biz/highlights-cut-and-color-salon-moscow-3">Read my reviews on Yelp</a>
+</div>
+</div>
+</section>
+<section style="padding-top:0">
+<h2>Follow <span class="grad">along</span></h2>
+<div class="social">
+<a href="https://www.facebook.com/moscowidahohairsalon/">Find us on Facebook<span>News, openings, and before-and-afters</span></a>
+<a href="https://www.instagram.com/highlightssalonbysheri/">Follow on Instagram<span>@highlightssalonbysheri</span></a>
+</div>
+</section>
+<section style="padding-top:0">
+<h2>Hours</h2>
+<ul class="hours">
+<li>Monday – Wednesday <span>11 am – 6 pm</span></li>
+<li>Thursday <span>11 am – 5 pm</span></li>
+<li>Friday <span>11 am – 6 pm</span></li>
+<li>Saturday <span>11 am – 4 pm</span></li>
+<li>Sunday <span>Closed</span></li>
+</ul>
+<div class="oneliner" style="margin-top:1.1rem"><p><b>Walk-ins welcome</b> when the chair is open — and <b>after-hours appointments are always available</b>. Hair emergency? Call anytime.</p></div>
+</section>
+<section class="visit">
+<div class="inner">
+<h2>Find the <span class="grad">salon</span></h2>
+<p class="addr">Eastside Marketplace · 1420 S Blaine St #31, Moscow, ID 83843</p>
+<p>Easy parking right outside the door.</p>
+<div class="btnrow" style="justify-content:flex-start">
+<a class="btn grd big" href="https://booksy.com/en-us/1129811_highlights-salon_hair-salon_17979_moscow">Book with Booksy</a>
+<a class="btn line" href="https://maps.google.com/?q=1420+S+Blaine+St+Moscow+ID+83843">Open in Maps</a>
+</div>
+</div>
+</section>
+<footer>Demo preview only. Details subject to owner review.</footer>
+</body>
+</html>
